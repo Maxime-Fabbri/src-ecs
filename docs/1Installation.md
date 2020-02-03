@@ -9,11 +9,6 @@
 
 >Selon votre config la VM peut être très gourmande, on peut donc ajuster cette [config](../vm_config.yaml)
 
-#### Ignorez les fichiers de config
-```
-git update-index --assume-unchanged vm_config.yaml;
-```
-
 ## Index
 
 0. [VM](#installation-et-lancement-de-la-vm)
