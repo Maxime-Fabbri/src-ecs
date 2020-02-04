@@ -31,3 +31,10 @@ db_update_remote:
 	rm -rf $(local_script) || true
 	mysqldump -t --insert-ignore --skip-opt -u ecs_user  -pecommerce  -h 127.0.0.1 ecommerce > $(local_script)
 	$(console) doctrine:database:import --connection=remote $(local_script)
+
+phpcs:
+    ./vendor/squizlabs/php_codesniffer/bin/phpcs --standard=PSR2 src/
+
+phpcbf:
+    ./vendor/squizlabs/php_codesniffer/bin/phpcbf --standard=PSR2 src/
+
